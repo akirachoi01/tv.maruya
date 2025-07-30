@@ -1,17 +1,12 @@
 let jwPlayerInstance = null;
 let activeChannelName = null;
+
 function updateClock() {
   const now = new Date();
-  let hours = now.getHours();
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const seconds = String(now.getSeconds()).padStart(2, '0');
-  const ampm = hours >= 12 ? 'PM' : 'AM';
-
-  hours = hours % 12;
-  hours = hours ? hours : 12; // the hour '0' should be '12'
-
-  const formattedTime = `${String(hours).padStart(2, '0')}:${minutes}:${seconds} ${ampm}`;
-  document.getElementById('clock').textContent = formattedTime;
+  const h = String(now.getHours()).padStart(2, '0');
+  const m = String(now.getMinutes()).padStart(2, '0');
+  const s = String(now.getSeconds()).padStart(2, '0');
+  document.getElementById('clock').textContent = `${h}:${m}:${s}`;
 }
 
 function populateCategoryDropdown() {
@@ -90,7 +85,7 @@ function loadChannelByName(name) {
         config.drm = channel.drm;
     }
     
-    document.title = `${channel.name} | MaruyaTV`;
+    document.title = `${channel.name} | SnapvisionXO`;
 
     hideFallbackMessage();
     jwPlayerInstance.setup(config);
@@ -145,3 +140,4 @@ document.onkeydown = (e) => {
     )
         return false;
 };
+
