@@ -83,6 +83,13 @@
     if (loading) loading.style.display = "none";
   }, 5000);
 </script>
+<script>
+  fetch('/api/jwplayer')
+    .then(res => res.json())
+    .then(data => {
+      jwplayer.key = data.key;
+    });
+</script>
 
 </body>
 </html>
