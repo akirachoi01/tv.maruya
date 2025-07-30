@@ -104,13 +104,14 @@ a:hover { color: white; }
   z-index: 900;
 }
 
-/* Channel Logo - Default (Desktop) */
+/* Channel Logo - TV overlay (desktop & mobile) */
 .channel-logo {
   width: 32px;
   height: 32px;
   position: absolute;
-  top: 23px;
-  right: 113%;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
 }
 
 #clock {
@@ -271,7 +272,7 @@ ul.channel-list li:hover:not(.active) {
   opacity: 0.8;
 }
 
-/* Mobile */
+/* Mobile adjustments */
 @media screen and (max-width: 768px), (orientation: portrait) {
   .popupBox { width: 50%; padding: 15px; }
   .popupBox h2 { font-size: 16px; }
@@ -284,16 +285,6 @@ ul.channel-list li:hover:not(.active) {
   #fallbackMessage { font-size: 16px; }
   #clock { font-size: 12px; padding: 4px 10px; }
   .jw-svg-icon-buffer { background-size: 40px 40px; width: 40px; height: 40px; opacity: 0.6; }
-
-  /* On mobile, move logo to top-left like a TV overlay */
-  .channel-logo {
-    top: 10px;
-    left: 10px;
-    right: auto;
-    width: 28px;
-    height: 28px;
-    position: absolute;
-  }
 }
 
 #popupOverlay.active { opacity: 1; visibility: visible; }
