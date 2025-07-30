@@ -99,8 +99,8 @@ a:hover { color: white; }
   z-index: 900;
 }
 .channel-logo {
-  width: 55px;
-  height: 55px;
+  width: 32px;
+  height: 32px;
  position: absolute;
   top: 23px; right: 18%;
 }
