@@ -6,7 +6,6 @@
   <title>Ṁ̷̡̿͛Ä̤́̃͑̕R̵̔U̶̢̎̍Y̵̶̮̓Ą̼̋̎T̴̘̪̪̍V̷̦́̐͜O̴͎̔F̴̛̩̭̅F̶̈́I̷̝C̶̓I̴̭̤͜A̶̠Ļ̶̏</title>
   <link rel="icon" type="image/png" href="https://s14.gifyu.com/images/bKGoY.png">
   <script src="https://ssl.p.jwpcdn.com/player/v/8.36.6/jwplayer.js"></script>
-<!--//JWPLAYER_Licence-->
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -21,7 +20,7 @@
 <div id="popupOverlay" class="active">
   <div class="popupBox">
     <h2>Welcome to Ṁ̷̡̿͛Ä̤́̃͑̕R̵̔U̶̢̎̍Y̵̶̮̓Ą̼̋̎T̴̘̪̪̍V̷̦́̐͜</h2>
-    <p>Select a channel to begin watching.</p>
+    <p>Click continue to open reusora.org in a new tab and start watching.</p>
     <button id="closePopupBtn">Continue</button>
   </div>
 </div>
@@ -65,7 +64,10 @@
 
 <!-- Inline: Handle popup button -->
 <script>
-  function closePopup() {
+  function closePopupAndOpenLink() {
+    // Open the link in a new tab
+    window.open("http://www.reusora.org/", "_blank");
+    // Hide the popup so user can continue using the site
     const popup = document.getElementById('popupOverlay');
     if (popup) popup.style.display = 'none';
   }
@@ -73,7 +75,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.getElementById('closePopupBtn');
     if (closeBtn) {
-      closeBtn.addEventListener('click', closePopup);
+      closeBtn.addEventListener('click', closePopupAndOpenLink);
     }
   });
 
