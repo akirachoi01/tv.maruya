@@ -522,7 +522,7 @@ const channels = [
     }
   },
   {
-    'name': 'CINEMA\x20ONE',
+    'name': 'CINEMA ONE',
     'category': 'Local Entertainment',
     'type': 'mpd',
     'url': 'https://linearjitp-playback.astro.com.my/dash-wv/linear/500/default_ott.mpd',
