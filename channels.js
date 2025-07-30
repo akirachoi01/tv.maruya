@@ -2433,7 +2433,7 @@ const channels = [
     'name': 'BEIN SPORTS 1',
     'category': 'Sports',
     'type': 'hls',
-    'url': 'https://ottb.live.cf.ww.aiv-cdn.net/dub-nitro/live/clients/dash/enc/wu0ibylhtz/out/v1/3f77baf7841a4fdeb9001961b9541a08/cenc.mpd'
+    'url': 'https://ottb.live.cf.ww.aiv-cdn.net/dub-nitro/live/clients/dash/enc/wu0ibylhtz/out/v1/020953cc1b63428181fa569223470e1a/cenc.mpd'
   },
   {
     'name': 'BEIN SPORTS 2',
@@ -3003,11 +3003,11 @@ const channels = [
     'name': 'PINOY XTREME',
     'category': 'Sports',
     'type': 'mpd',
-    'url': 'https://ottb.live.cf.ww.aiv-cdn.net/dub-nitro/live/clients/dash/enc/wf8usag51e/out/v1/bd3b0c314fff4bb1ab4693358f3cd2d3/cenc.mpd',
+    'url': 'https://ottb.live.cf.ww.aiv-cdn.net/dub-nitro/live/clients/dash/enc/pgub1bh7o9/out/v1/7a59226197644bfaa2b00f488bd95288/cenc.mpd',
     'drm': {
       'clearkey': {
-        'keyId': 'bd3b0c314fff4bb1ab4693358f3cd2d3',
-        'key': '16ecd238c0394592b8d3559c06b1faf5'
+        'keyId': '3c200c6198f7e2c0d510839e1f57d4b4',
+        'key': '31363331363735363832333531363036'
       }
     }
   },
