@@ -1,5 +1,144 @@
 const channels = [
   {
+    'name': 'Discovery Channel',
+    'category': 'Documentary',
+    'type': 'mpd', // Assuming 'application/dash+xml' maps to 'mpd'
+    'url': 'https://linearjitp-playback.astro.com.my/dash-wv/linear/2510/default_primary.mpd',
+    'drm': {
+      'clearkey': {
+        'keyId': '276767a578aae2eacb284247ccd9eb10',
+        'key': '03ef88df1a47669e5459e105e3b535b1'
+      }
+    }
+    // KODIPROP:inputstream.adaptive.common_headers not directly translatable to this object structure
+  },
+  {
+    'name': 'Discovery Asia',
+    'category': 'Documentary',
+    'type': 'mpd',
+    'url': 'https://linearjitp-playback.astro.com.my/dash-wv/linear/501/default_primary.mpd',
+    'drm': {
+      'clearkey': {
+        'keyId': '3ff02fcd80c2e3230c52ae70fe903410',
+        'key': 'c3a58ec867cc25829e1fbe8938442553'
+      }
+    }
+  },
+  {
+    'name': 'Discovery Science',
+    'category': 'Documentary',
+    'type': 'hls', // 'application/vnd.apple.mpegurl' usually means HLS
+    'url': 'https://aseanic.github.io/hls/98.m3u8'
+  },
+  {
+    'name': 'Discovery Family',
+    'category': 'Documentary',
+    'type': 'hls',
+    'url': 'https://aseanic.github.io/hls/99.m3u8'
+  },
+  {
+    'name': 'Discovery Life',
+    'category': 'Documentary',
+    'type': 'hls',
+    'url': 'https://aseanic.github.io/hls/100.m3u8'
+  },
+  {
+    'name': 'Love Nature',
+    'category': 'Documentary',
+    'type': 'mpd',
+    'url': 'https://linearjitp-playback.astro.com.my/dash-wv/linear/5096/default_primary.mpd',
+    'drm': {
+      'clearkey': {
+        'keyId': '168bd815468639fe4528b4bf0141f310',
+        'key': '775a654c0610811ad022329a68884de1'
+      }
+    }
+  },
+  {
+    'name': 'Global Trekker',
+    'category': 'Documentary',
+    'type': 'mpd',
+    'url': 'https://linearjitp-playback.astro.com.my/dash-wv/linear/5094/default_primary.mpd',
+    'drm': {
+      'clearkey': {
+        'keyId': '92d34a84fae8e54de0a829629941be10',
+        'key': '2fb39ab3f55333d5fa3e830ebf99ec16'
+      }
+    }
+  },
+  {
+    'name': 'BBC Earth',
+    'category': 'Documentary',
+    'type': 'mpd',
+    'url': 'https://linearjitp-playback.astro.com.my/dash-wv/linear/5051/default_primary.mpd',
+    'drm': {
+      'clearkey': {
+        'keyId': 'dbf62ff0804bc5b8d523ef009d786310',
+        'key': 'bb1bdb27cc5fe1ec637d257999344cc3'
+      }
+    }
+  },
+  {
+    'name': 'History',
+    'category': 'Documentary',
+    'type': 'mpd',
+    'url': 'https://linearjitp-playback.astro.com.my/dash-wv/linear/604/default_primary.mpd',
+    'drm': {
+      'clearkey': {
+        'keyId': '3feecc36930732cbb69306dc687c6f10',
+        'key': '3458265f7530bf1fef204ca8cb4689db'
+      }
+    }
+  },
+  {
+    'name': 'Animal Planet',
+    'category': 'Documentary',
+    'type': 'mpd',
+    'url': 'https://linearjitp-playback.astro.com.my/dash-wv/linear/2710/default_primary.mpd',
+    'drm': {
+      'clearkey': {
+        'keyId': 'd5199f1513a0286e038dae8f7d820010',
+        'key': '4d4d4d9dc41be43f528a4940cf66f14c'
+      }
+    }
+  },
+  {
+    'name': 'Crime + Investigation',
+    'category': 'Documentary',
+    'type': 'mpd',
+    'url': 'https://linearjitp-playback.astro.com.my/dash-wv/linear/2111/default_primary.mpd',
+    'drm': {
+      'clearkey': {
+        'keyId': '22fc5baf47ae3b6322bc244206bbb210',
+        'key': 'db1ee2b8994b91aac65049ef3e493787'
+      }
+    }
+  },
+  {
+    'name': 'Investigation Discovery',
+    'category': 'Documentary',
+    'type': 'hls',
+    'url': 'https://aseanic.github.io/hls/107.m3u8'
+  },
+  {
+    'name': 'NatGeo',
+    'category': 'Documentary',
+    'type': 'hls',
+    'url': 'https://aseanic.github.io/hls/108.m3u8'
+  },
+  {
+    'name': 'NatGeo Wild',
+    'category': 'Documentary',
+    'type': 'hls',
+    'url': 'https://aseanic.github.io/hls/109.m3u8'
+  },
+  {
+    'name': 'Smithsonian',
+    'category': 'Documentary',
+    'type': 'hls',
+    'url': 'https://aseanic.github.io/hls/110.m3u8'
+  },
+  {
     'name': 'CNN',
     'category': 'Local',
     'type': 'mpd',
