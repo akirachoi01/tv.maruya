@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,21 +30,23 @@
 <!-- Main Container -->
 <div class="container">
   <div class="video-container">
-    <div id="player"></div>
+      <div id="player"></div>
     <div id="fallbackMessage">Select a channel to start watching!</div>
   </div>
 
   <aside class="sidebar">
     <div class="top-controls">
-      <div class="channel-header">
-        <img src="https://s14.gifyu.com/images/bKGoY.png" alt="MaruyaTV Logo" class="channel-logo" />
-        <div class="channel-text-group">
-          <div class="channel-text">MARUYATV</div>
-          <div id="clock" class="clock-text"></div>
-        </div>
-      </div>
+
+     <div class="channel-header">
+  <img src="https://s14.gifyu.com/images/bKGoY.png" alt="MaruyaTV Logo" class="channel-logo" />
+  <div class="channel-text-group">
+    <div class="channel-text">MARUYATV</div>
+    <div id="clock" class="clock-text"></div>
+  </div>
+</div>
       <div class="credits">
-        Made by akirachoi01
+        Made by 
+        <a href="#">akirachoi01</a>
       </div>
       <div id="channelCount"></div>
       <select id="categoryFilter" onchange="setupChannelList()">
@@ -62,13 +66,7 @@
 
 <!-- Inline: Handle popup button -->
 <script>
-  function closePopupAndOpenLink() {
-    // Open new tab for reusora.org but keep current tab focused
-    const newTab = window.open("https://reusora.org/", "_blank", "noopener");
-    if (newTab) newTab.blur();
-    window.focus();
-
-    // Close popup
+  function closePopup() {
     const popup = document.getElementById('popupOverlay');
     if (popup) popup.style.display = 'none';
   }
@@ -76,7 +74,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.getElementById('closePopupBtn');
     if (closeBtn) {
-      closeBtn.addEventListener('click', closePopupAndOpenLink);
+      closeBtn.addEventListener('click', closePopup);
     }
   });
 
@@ -96,4 +94,3 @@
 
 </body>
 </html>
-
