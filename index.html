@@ -44,7 +44,7 @@
 </div>
       <div class="credits">
         Made by 
-        <a href="https://reusora.org/" target="_blank" rel="noopener noreferrer">akirachoi01</a>
+        <a href="#">akirachoi01</a>
       </div>
       <div id="channelCount"></div>
       <select id="categoryFilter" onchange="setupChannelList()">
@@ -64,18 +64,15 @@
 
 <!-- Inline: Handle popup button -->
 <script>
- // function closePopupAndOpenLink() {
-    // Open the link in a new tab
-   // window.open("http://www.reusora.org/", "_blank");
-    // Hide the popup so user can continue using the site
-   const popup = document.getElementById('popupOverlay');
-   if (popup) popup.style.display = 'none';
+  function closePopup() {
+    const popup = document.getElementById('popupOverlay');
+    if (popup) popup.style.display = 'none';
   }
 
   document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.getElementById('closePopupBtn');
     if (closeBtn) {
-      closeBtn.addEventListener('click', closePopupAndOpenLink);
+      closeBtn.addEventListener('click', closePopup);
     }
   });
 
