@@ -30,6 +30,13 @@ a:hover { color: white; }
   animation: spin 1s linear infinite;
   margin-bottom: 20px;
 }
+.typewriter {
+  font-size: 16px;
+  font-family: monospace;
+  white-space: pre;
+  border-right: 2px solid white;
+  overflow: hidden;
+}
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 .loading-text {
   font-size: 18px;
