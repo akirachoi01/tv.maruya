@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <script async src="https://ss.mrmnd.com/native.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ṁ̷̡̿͛Ä̤́̃͑̕R̵̔U̶̢̎̍Y̵̶̮̓Ą̼̋̎T̴̘̪̪̍V̷̦́̐͜O̴͎̔F̴̛̩̭̅F̶̈́I̷̝C̶̓I̴̭̤͜A̶̠Ļ̶̏</title>
-  <link rel="icon" type="image/png" href="https://s14.gifyu.com/images/bKGoY.png">
+  <link rel="icon" type="image/png" href="https://i.imgur.com/cmOdVwr.png">
   <script src="https://jwplayer.salidaph.online/player/v/8.36.6/jwplayer.js"></script>
   <link rel="stylesheet" href="./style.css">
   <style>
@@ -42,15 +43,16 @@
 <!-- Main Container -->
 <div class="container">
   <div class="video-container">
-      <div id="player"></div>
+          <div id="player"></div>
     <div id="fallbackMessage">Select a channel to start watching!</div>
+    <div data-mndazid="29d63c1c-f660-4785-b88b-84518f45ab96"></div>
   </div>
 
   <aside class="sidebar">
     <div class="top-controls">
 
      <div class="channel-header">
-  <img src="https://s14.gifyu.com/images/bKGoY.png" alt="MaruyaTV Logo" class="channel-logo" />
+  <img src="https://i.imgur.com/cmOdVwr.png" alt="MaruyaTV Logo" class="channel-logo" />
   <div class="channel-text-group">
     <div class="channel-text">MARUYATV</div>
     <div id="clock" class="clock-text"></div>
@@ -60,6 +62,7 @@
         Made by 
         <a href="#">akirachoi01</a>
       </div>
+      <div data-mndazid="29d63c1c-f660-4785-b88b-84518f45ab96"></div>
       <div id="channelCount"></div>
       <select id="categoryFilter" onchange="setupChannelList()">
         <option value="all">All Categories</option>
@@ -121,3 +124,11 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
