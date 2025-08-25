@@ -18,7 +18,70 @@
       overflow: hidden;
       margin-top: 8px;
     }
+ .counter-box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 220px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+    .counter-box b {
+      display: block;
+      margin-bottom: 5px;
+    }
+ 
   </style>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+    import { getDatabase, ref, onValue, onDisconnect, set, increment, update, serverTimestamp } 
+      from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+
+    // ✅ Your Firebase Config (palitan mo dito galing sa Firebase Console)
+    const firebaseConfig = {
+    apiKey: "AIzaSyB3CwoL3M5GwY8eNpKyJuYzmE975sr6lSM",
+    authDomain: "tv-salidaph-online.firebaseapp.com",
+    databaseURL: "https://tv-salidaph-online-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "tv-salidaph-online",
+    storageBucket: "tv-salidaph-online.firebasestorage.app",
+    messagingSenderId: "842750353366",
+    appId: "1:842750353366:web:d24b8de7851583639e8e77",
+      };
+
+    // Init Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+     // ✅ Generate random guest ID
+    const userId = "guest_" + Math.floor(Math.random() * 100000);
+
+    // ✅ Add guest to onlineUsers
+    const userRef = ref(db, "onlineUsers/" + userId);
+    set(userRef, { 
+      guest: true, 
+      timestamp: Date.now() 
+    });
+    onDisconnect(userRef).remove(); // auto remove pag close tab
+
+    // ✅ Increment totalVisitors (only once per visitor load)
+    const totalRef = ref(db, "totalVisitors/count");
+    update(ref(db, "totalVisitors"), {
+      count: increment(1),
+      lastVisit: serverTimestamp()
+    });
+
+    // ✅ Listen for guests online
+    const onlineRef = ref(db, "onlineUsers");
+    onValue(onlineRef, (snapshot) => {
+      const data = snapshot.val() || {};
+      let guests = Object.keys(data).length;
+      document.getElementById("guests").textContent = guests;
+    });
+
+    // ✅ Listen for total visitors
+    onValue(totalRef, (snapshot) => {
+      document.getElementById("total").textContent = snapshot.val() || 0;
+    });
+  </script>
 </head>
 <body>
 
@@ -56,6 +119,11 @@
   <img src="https://i.imgur.com/cmOdVwr.png" alt="MaruyaTV Logo" class="channel-logo" />
   <div class="channel-text-group">
     <div class="channel-text">MARUYATV</div>
+<div class="counter-box">
+    <b>👥 Online now</b>
+    Guests online: <span id="guests">0</span><br>
+    Total visitors: <span id="total">0</span>
+  </div>
     <div id="clock" class="clock-text"></div>
   </div>
 </div>
