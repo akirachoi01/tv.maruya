@@ -5,6 +5,7 @@
   <script async src="https://ss.mrmnd.com/native.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ṁ̷̡̿͛Ä̤́̃͑̕R̵̔U̶̢̎̍Y̵̶̮̓Ą̼̋̎T̴̘̪̪̍V̷̦́̐͜O̴͎̔F̴̛̩̭̅F̶̈́I̷̝C̶̓I̴̭̤͜A̶̠Ļ̶̏</title>
+   <div data-mndazid="29d63c1c-f660-4785-b88b-84518f45ab96"></div>
   <link rel="icon" type="image/png" href="https://i.imgur.com/cmOdVwr.png">
   <script src="https://jwplayer.salidaph.online/player/v/8.36.6/jwplayer.js"></script>
   <link rel="stylesheet" href="./style.css">
@@ -101,7 +102,7 @@
     <p>Cute ko, Ikaw Dili.</p>
     <button id="closePopupBtn">Ok!</button>
   </div>
-<div data-mndazid="29d63c1c-f660-4785-b88b-84518f45ab96"></div>
+
 </div>
  
 <!-- Main Container -->
@@ -131,7 +132,7 @@
         Made by 
         <a href="#">akirachoi01</a>
       </div>
-      <div data-mndazid="29d63c1c-f660-4785-b88b-84518f45ab96"></div>
+   
       <div id="channelCount"></div>
       <select id="categoryFilter" onchange="setupChannelList()">
         <option value="all">All Categories</option>
